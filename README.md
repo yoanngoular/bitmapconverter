@@ -3,13 +3,13 @@ A library to convert Android Bitmap object into a .bmp file format byte array.
 
 The output data are gray scaled as shown in the following picture excerpt from the sample app.
 
-![](http://i68.tinypic.com/atr8nb.png)
+<img align="center" src="http://i65.tinypic.com/ofoj1k.png"/>
 
 # Try it out
 
 ### Gradle dependency
 ```groovy
-implementation 'com.github.yoanngoular:bitmapconverter:0.1.0'
+implementation 'com.github.yoanngoular:bitmapconverter:0.2.0'
 ```
 
 ### Maven dependency
@@ -17,7 +17,7 @@ implementation 'com.github.yoanngoular:bitmapconverter:0.1.0'
 <dependency>
   <groupId>com.github.yoanngoular</groupId>
   <artifactId>bitmapconverter</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <type>aar</type>
 </dependency>
 ```
@@ -25,10 +25,10 @@ implementation 'com.github.yoanngoular:bitmapconverter:0.1.0'
 ### Get Started
 Use `BitmapConverter` instance to convert `android.graphics.Bitmap` object into byte array to .bmp file format.
 
-Getting the instance:
+Instantiate BitmapConverter:
 
 ```java
-BitmapConverter bitmapConverter = BitmapConverter.getInstance();
+BitmapConverter bitmapConverter = new BitmapConverter();
 ```
 
 Convert Bitmap to default format (24-bit color):
@@ -42,6 +42,8 @@ There is currently only 2 available format (8-bit color and 24-bit color).
 ```java
 byte [] bmpFile = bitmapConverter.convert(bitmap, BitmapFormat.BITMAP_8_BIT_COLOR);
 ```
+
+For those interested in the bmp header format, BitmapConverter generates a header using the most common Windows format : [BITMAPINFOHEADER](https://msdn.microsoft.com/en-us/library/windows/desktop/dd183376(v=vs.85).aspx)
 
 # Contributing
 Contributions you say?  Yes please!
@@ -60,4 +62,4 @@ I also wished to see the whole process of creating and publishing a library as a
 I am not sure that it will be useful to someone but I'd love to know if it is. 
 If some of you really need a specific output format or even the possibility to store colored images, I might work on providing you this if this is a recurrent demand. 
 
-Please hit up at ygoular@gmail.com for any feedback or issues you may encounter.
+Please hit me up at ygoular@gmail.com for any feedback or issues you may encounter.

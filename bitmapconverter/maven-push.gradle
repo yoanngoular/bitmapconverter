@@ -92,14 +92,14 @@ afterEvaluate { project ->
         sign configurations.archives
     }
 
-    task androidJavadocs(type: Javadoc) {
+    /*task androidJavadocs(type: Javadoc) {
     source = android.sourceSets.main.allJava
     }
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
     classifier = 'javadoc'
     from androidJavadocs.destinationDir
-    }
+    }*/
 
     task androidSourcesJar(type: Jar) {
         classifier = 'sources'

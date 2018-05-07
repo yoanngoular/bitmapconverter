@@ -41,11 +41,14 @@ public class MainActivity extends AppCompatActivity {
             // Colored png file
             Bitmap bitmap = BitmapFactory.decodeStream(getAssets().open(FILE_NAME));
 
+            // Instantiate BitmapConverter
+            BitmapConverter bitmapConverter = new BitmapConverter();
+
             // USE CASE 1
-            byte [] bmp24bitColor = BitmapConverter.getInstance().convert(bitmap); // Default format is BITMAP_24_BIT_COLOR
+            byte [] bmp24bitColor = bitmapConverter.convert(bitmap); // Default format is BITMAP_24_BIT_COLOR
 
             // USE CASE 2
-            byte [] bmp8bitColor = BitmapConverter.getInstance().convert(bitmap, BitmapFormat.BITMAP_8_BIT_COLOR);
+            byte [] bmp8bitColor = bitmapConverter.convert(bitmap, BitmapFormat.BITMAP_8_BIT_COLOR);
 
             // Gray scaled bmp files
             image8bitColor.setImageDrawable(Drawable.createFromStream(new ByteArrayInputStream(bmp8bitColor), "8-bit"));

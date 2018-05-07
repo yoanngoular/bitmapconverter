@@ -29,8 +29,6 @@ public class BitmapConverter {
 
     private static final int ASCII_VALUE_B_CC = 0x42;
     private static final int ASCII_VALUE_M_CC = 0x4D;
-
-    private static BitmapConverter INSTANCE;
     
     // Buffer that store data to bmp file format
     private ByteBuffer buffer;
@@ -48,16 +46,7 @@ public class BitmapConverter {
     private byte[] dummyBytesPerRow;
     private boolean needPadding;
 
-    private BitmapConverter() { /* Empty private constructor */ }
-
-    /**
-     * Singleton pattern
-     * @return the unique instance of BitmapConverter
-     */
-    public static synchronized BitmapConverter getInstance() {
-        if(INSTANCE == null) INSTANCE = new BitmapConverter();
-        return INSTANCE;
-    }
+    public BitmapConverter() { /* Empty constructor */ }
 
     /**
      * Convert Android Bitmap object into bmp file default format byte array
