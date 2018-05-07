@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Global app resources -->
+    <string name="app_name">bitmapconverter</string>
+
+    <!-- Image descriptions -->
+    <string name="image_description_input_image">input image</string>
+    <string name="image_description_8_bit_color">bmp image to 8-bit color format</string>
+    <string name="image_description_24_bit_color">bmp image to 24-bit color format</string>
+
+    <!-- Default texts -->
+    <string name="text_8_bit_color">8-bit color</string>
+    <string name="text_24_bit_color">24-bit color</string>
+    <string name="text_input_image">input image</string>
+
+</resources>

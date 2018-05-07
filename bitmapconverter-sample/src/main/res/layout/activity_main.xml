@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/CustomTextAppearance"
+        android:text="@string/text_input_image"
+        app:layout_constraintBottom_toTopOf="@+id/image_input"
+        app:layout_constraintEnd_toEndOf="@+id/image_input"
+        app:layout_constraintStart_toStartOf="@+id/image_input" />
+
+    <ImageView
+        android:id="@+id/image_input"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163"
+        app:srcCompat="@drawable/git_and_github"
+        android:contentDescription="@string/image_description_input_image" />
+
+    <TextView
+        style="@style/CustomTextAppearance"
+        android:text="@string/text_8_bit_color"
+        app:layout_constraintBottom_toTopOf="@+id/image_8bit_color"
+        app:layout_constraintEnd_toEndOf="@+id/image_8bit_color"
+        app:layout_constraintStart_toStartOf="@+id/image_8bit_color" />
+
+    <ImageView
+        android:id="@+id/image_8bit_color"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:contentDescription="@string/image_description_8_bit_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_24bit_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689" />
+
+    <TextView
+        style="@style/CustomTextAppearance"
+        android:text="@string/text_24_bit_color"
+        app:layout_constraintBottom_toTopOf="@+id/image_24bit_color"
+        app:layout_constraintEnd_toEndOf="@+id/image_24bit_color"
+        app:layout_constraintStart_toStartOf="@+id/image_24bit_color" />
+
+    <ImageView
+        android:id="@+id/image_24bit_color"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:contentDescription="@string/image_description_24_bit_color"
+        app:layout_constraintBottom_toBottomOf="@+id/image_8bit_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_8bit_color"
+        app:layout_constraintTop_toTopOf="@+id/image_8bit_color" />
+
+</android.support.constraint.ConstraintLayout>
