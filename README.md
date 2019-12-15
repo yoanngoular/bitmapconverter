@@ -3,7 +3,7 @@ A library to convert Android Bitmap object into a .bmp file format byte array.
 
 The output data are gray scaled as shown in the following picture excerpt from the sample app.
 
-<img align="center" src="http://i65.tinypic.com/ofoj1k.png"/>
+<img width="227" height="480" align="center" src="https://i.ibb.co/TcqKLc1/device-2019-12-15-121339.png"/>
 
 # Try it out
 
